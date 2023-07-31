@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-//use App\Http\Requests\LivroRequest;
 use App\Http\Requests\CreateRequest;
 use App\Http\Requests\UpdateRequest;
 use App\Models\Endereco;
@@ -15,6 +14,7 @@ use Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Backpack\CRUD\app\Library\Widget;
 use Exception;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -49,7 +49,6 @@ class LivroCrudController extends CrudController
             return $response['items'][0]['volumeInfo'];
         }
     }
-
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -93,13 +92,8 @@ class LivroCrudController extends CrudController
     {
 
         $this->crud->setValidation(CreateRequest::class);
+        Widget::add()->type('script')->content('assets/js/admin/forms/livro.js');
         CRUD::setFromDb();
-        CRUD::field('endereco.cep')->type('text')->label('CEP')->wrapper(['class' => 'form-group col-md-3']);
-        CRUD::field('endereco.rua')->type('text')->label('Rua')->wrapper(['class' => 'form-group col-md-7']);
-        CRUD::field('endereco.numero')->type('text')->label('Número')->wrapper(['class' => 'form-group col-md-2']);
-        CRUD::field('endereco.bairro')->type('text')->label('Bairro')->wrapper(['class' => 'form-group col-md-5']);
-        CRUD::field('endereco.cidade')->type('text')->label('Cidade')->wrapper(['class' => 'form-group col-md-5']);
-        CRUD::field('endereco.uf')->type('text')->label('UF')->wrapper(['class' => 'form-group col-md-2']);
 
         CRUD::field('titulo')->remove();
         CRUD::field('autor')->remove();
@@ -111,7 +105,46 @@ class LivroCrudController extends CrudController
         CRUD::field('capa')->type('upload')->withFiles(['disk' => 's3', 'path' => 'capas'])
             ->label('Capa do Livro')->wrapper(['class' => 'form-group col-md-12']);
 
+        $this->crud->addField([
+            'name' => 'endereco.cep',
+            'type' => 'text',
+            'label' => 'CEP',
+            'wrapper' => ['class' => 'form-group col-md-3']
+        ]);
+        $this->crud->addField([
+            'name' => 'endereco.rua',
+            'type' => 'text',
+            'label' => 'Rua',
+            'wrapper' => ['class' => 'form-group col-md-7']
+        ]);
+        $this->crud->addField([
+            'name' => 'endereco.numero',
+            'type' => 'text',
+            'label' => 'Número',
+            'wrapper' => ['class' => 'form-group col-md-2']
+        ]);
+        $this->crud->addField([
+            'name' => 'endereco.bairro',
+            'type' => 'text',
+            'label' => 'Bairro',
+            'wrapper' => ['class' => 'form-group col-md-5']
+        ]);
+        $this->crud->addField([
+            'name' => 'endereco.cidade',
+            'type' => 'text',
+            'label' => 'Cidade',
+            'wrapper' => ['class' => 'form-group col-md-5']
+        ]);
+        $this->crud->addField([
+            'name' => 'endereco.uf',
+            'type' => 'text',
+            'label' => 'UF',
+            'wrapper' => ['class' => 'form-group col-md-2']
+        ]);
+
         Livro::creating(function ($entry) {
+            $isbn = $entry->isbn;
+            $livro = $this->searchBookAPI($isbn);
             $endereco = Endereco::create([
                 'cep' => request()->get('endereco')['cep'],
                 'rua' => request()->get('endereco')['rua'],
@@ -120,8 +153,6 @@ class LivroCrudController extends CrudController
                 'cidade' => request()->get('endereco')['cidade'],
                 'uf' => request()->get('endereco')['uf'],
             ]);
-            $isbn = $entry->isbn;
-            $livro = $this->searchBookAPI($isbn);
             $entry->titulo = $livro['title'] ?? 'Não informado';
             $entry->autor = $livro['authors'][0] ?? 'Não informado';
             $entry->editora = $livro['publisher'] ?? 'Não informado';
@@ -210,5 +241,4 @@ class LivroCrudController extends CrudController
             $endereco->save();
         });
     }
-
 }
