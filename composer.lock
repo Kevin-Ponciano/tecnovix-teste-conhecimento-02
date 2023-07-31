@@ -4,8 +4,396 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa322c53454393ed775cfe4807d54a50",
+    "content-hash": "7e422606083d10fa520d4e1e082c3d67",
     "packages": [
+        {
+            "name": "aws/aws-crt-php",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/awslabs/aws-crt-php.git",
+                "reference": "2f1dc7b7eda080498be96a4a6d683a41583030e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/2f1dc7b7eda080498be96a4a6d683a41583030e9",
+                "reference": "2f1dc7b7eda080498be96a4a6d683a41583030e9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35||^5.6.3||^9.5",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "ext-awscrt": "Make sure you install awscrt native extension to use any of the functionality."
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "AWS SDK Common Runtime Team",
+                    "email": "aws-sdk-common-runtime@amazon.com"
+                }
+            ],
+            "description": "AWS Common Runtime for PHP",
+            "homepage": "https://github.com/awslabs/aws-crt-php",
+            "keywords": [
+                "amazon",
+                "aws",
+                "crt",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/awslabs/aws-crt-php/issues",
+                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.2.2"
+            },
+            "time": "2023-07-20T16:49:55+00:00"
+        },
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "3.269.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "6d759ef9f24f0c7f271baf8014f41fc0cfdfbf78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6d759ef9f24f0c7f271baf8014f41fc0cfdfbf78",
+                "reference": "6d759ef9f24f0c7f271baf8014f41fc0cfdfbf78",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-crt-php": "^1.0.4",
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-simplexml": "*",
+                "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
+                "guzzlehttp/promises": "^1.4.0",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
+                "mtdowling/jmespath.php": "^2.6",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "andrewsville/php-token-reflection": "^1.4",
+                "aws/aws-php-sns-message-validator": "~1.0",
+                "behat/behat": "~3.0",
+                "composer/composer": "^1.10.22",
+                "dms/phpunit-arraysubset-asserts": "^0.4.0",
+                "doctrine/cache": "~1.4",
+                "ext-dom": "*",
+                "ext-openssl": "*",
+                "ext-pcntl": "*",
+                "ext-sockets": "*",
+                "nette/neon": "^2.3",
+                "paragonie/random_compat": ">= 2",
+                "phpunit/phpunit": "^4.8.35 || ^5.6.3 || ^9.5",
+                "psr/cache": "^1.0",
+                "psr/http-message": "^1.0",
+                "psr/simple-cache": "^1.0",
+                "sebastian/comparator": "^1.2.3 || ^4.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
+                "doctrine/cache": "To use the DoctrineCacheAdapter",
+                "ext-curl": "To send requests using cURL",
+                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+                "ext-sockets": "To use client-side monitoring"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Aws\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amazon Web Services",
+                    "homepage": "http://aws.amazon.com"
+                }
+            ],
+            "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+            "homepage": "http://aws.amazon.com/sdkforphp",
+            "keywords": [
+                "amazon",
+                "aws",
+                "cloud",
+                "dynamodb",
+                "ec2",
+                "glacier",
+                "s3",
+                "sdk"
+            ],
+            "support": {
+                "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
+                "issues": "https://github.com/aws/aws-sdk-php/issues",
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.269.0"
+            },
+            "time": "2023-04-26T18:21:04+00:00"
+        },
+        {
+            "name": "backpack/basset",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Backpack/basset.git",
+                "reference": "f5177010471bae6b450414e1a204a2219eb3060a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Backpack/basset/zipball/f5177010471bae6b450414e1a204a2219eb3060a",
+                "reference": "f5177010471bae6b450414e1a204a2219eb3060a",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.5",
+                "laravel/framework": "^10.1|^9.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^6.0|^7.2",
+                "orchestra/testbench": "^7.22|^8.5",
+                "pestphp/pest": "^1.22|^2.5",
+                "pestphp/pest-plugin-laravel": "^1.4|^2.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "~9.0|~10.0"
+            },
+            "suggest": {
+                "ext-zip": "Required to use @bassetArchive with .zip archives."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Backpack\\Basset\\BassetServiceProvider"
+                    ],
+                    "aliases": {
+                        "Basset": "Backpack\\Basset\\Facades\\Basset"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Backpack\\Basset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@tabacitu.ro",
+                    "homepage": "https://tabacitu.ro"
+                }
+            ],
+            "description": "Dead-simple way to load CSS or JS assets only once per page, when using Laravel 10+.",
+            "homepage": "https://github.com/laravel-backpack/basset",
+            "keywords": [
+                "Load CSS once",
+                "Load JS once",
+                "assets",
+                "basset",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Backpack/basset/issues",
+                "source": "https://github.com/Laravel-Backpack/basset/tree/1.0.2"
+            },
+            "time": "2023-07-24T16:44:48+00:00"
+        },
+        {
+            "name": "backpack/crud",
+            "version": "6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Backpack/CRUD.git",
+                "reference": "f3c610554f60473f1b9913f0ae6fd8774af8e459"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/f3c610554f60473f1b9913f0ae6fd8774af8e459",
+                "reference": "f3c610554f60473f1b9913f0ae6fd8774af8e459",
+                "shasum": ""
+            },
+            "require": {
+                "backpack/basset": "^1.0.0",
+                "creativeorange/gravatar": "~1.0",
+                "doctrine/dbal": "^3.0",
+                "guzzlehttp/guzzle": "^7.0",
+                "laravel/framework": "^10.0",
+                "prologue/alerts": "^1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "~10.0|~9.0",
+                "scrutinizer/ocular": "~1.7",
+                "spatie/laravel-translatable": "^6.0"
+            },
+            "suggest": {
+                "backpack/filemanager": "Required to use the browse and browse_multiple fields.",
+                "backpack/generators": "Required on localhost to easily generate CRUDs, models, controllers etc.",
+                "backpack/revise-operation": "Optional operation to remember all entry changes, undo and redo them (aka audit trait)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Backpack\\CRUD\\BackpackServiceProvider"
+                    ],
+                    "aliases": {
+                        "CRUD": "Backpack\\CRUD\\app\\Library\\CrudPanel\\CrudPanelFacade",
+                        "Widget": "Backpack\\CRUD\\app\\Library\\Widget"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Backpack\\CRUD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "cristian.tabacitu@backpackforlaravel.com",
+                    "homepage": "https://backpackforlaravel.com",
+                    "role": "Creator & Maintainer"
+                }
+            ],
+            "description": "Quickly build admin interfaces using Laravel, Bootstrap and JavaScript.",
+            "homepage": "https://github.com/laravel-backpack/CRUD",
+            "keywords": [
+                "Admin Interface",
+                "Content management system",
+                "admin panel",
+                "admin panel for laravel",
+                "admin template for laravel",
+                "backpack",
+                "base",
+                "bootstrap 5 admin panel laravel",
+                "bread",
+                "cms",
+                "content management framework",
+                "coreui for laravel",
+                "create",
+                "crud",
+                "dashboard for laravel",
+                "delete",
+                "laravel admin",
+                "read",
+                "tabler for laravel",
+                "update"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Backpack/CRUD/issues",
+                "source": "https://github.com/Laravel-Backpack/CRUD/tree/6.1.1"
+            },
+            "time": "2023-07-29T21:28:59+00:00"
+        },
+        {
+            "name": "backpack/theme-tabler",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Backpack/theme-tabler.git",
+                "reference": "ff0f27a94fecd34b0ebb5271b5e91625cc4c78ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Backpack/theme-tabler/zipball/ff0f27a94fecd34b0ebb5271b5e91625cc4c78ff",
+                "reference": "ff0f27a94fecd34b0ebb5271b5e91625cc4c78ff",
+                "shasum": ""
+            },
+            "require": {
+                "backpack/crud": "^6.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~5|~6",
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Backpack\\ThemeTabler\\AddonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Backpack\\ThemeTabler\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mauro Martinez",
+                    "email": "maurohmartinez@gmail.com",
+                    "homepage": "https://backpackforlaravel.com"
+                },
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@backpackforlaravel.com",
+                    "homepage": "https://backpackforlaravel.com"
+                },
+                {
+                    "name": "Antonio Almeida",
+                    "email": "promatik@gmail.com",
+                    "homepage": "https://backpackforlaravel.com"
+                }
+            ],
+            "description": "UI for Backpack v6 that uses Tabler and Bootstrap v5.",
+            "homepage": "https://github.com/backpack/theme-tabler",
+            "keywords": [
+                "Backpack Addon",
+                "Backpack for Laravel",
+                "ThemeTabler",
+                "backpack",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Backpack/theme-tabler/issues",
+                "source": "https://github.com/Laravel-Backpack/theme-tabler/tree/1.0.6"
+            },
+            "time": "2023-07-20T14:28:55+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -60,6 +448,69 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "creativeorange/gravatar",
+            "version": "v1.0.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/creativeorange/gravatar.git",
+                "reference": "3a1b227c48091b039b967265ec13c0800c70ac79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/3a1b227c48091b039b967265ec13c0800c70ac79",
+                "reference": "3a1b227c48091b039b967265ec13c0800c70ac79",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5|^6|^7|^8|^9|^10.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^0.6.2|^2.4",
+                "orchestra/testbench": "^5.4|^8.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Creativeorange\\Gravatar\\GravatarServiceProvider"
+                    ],
+                    "aliases": {
+                        "Gravatar": "Creativeorange\\Gravatar\\Facades\\Gravatar"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Creativeorange\\Gravatar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaco Tijssen",
+                    "email": "jaco@creativeorange.nl",
+                    "homepage": "https://www.creativeorange.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Gravatar package for retrieving gravatar image URLs or checking the existance of an image.",
+            "keywords": [
+                "avatar",
+                "gravatar",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/creativeorange/gravatar/issues",
+                "source": "https://github.com/creativeorange/gravatar/tree/v1.0.23"
+            },
+            "time": "2023-02-06T07:57:20+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -135,6 +586,349 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.2"
             },
             "time": "2022-10-27T11:44:00+00:00"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/1ca8f21980e770095a31456042471a57bc4c68fb",
+                "reference": "1ca8f21980e770095a31456042471a57bc4c68fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/coding-standard": "^9",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
+            "homepage": "https://www.doctrine-project.org/projects/cache.html",
+            "keywords": [
+                "abstraction",
+                "apcu",
+                "cache",
+                "caching",
+                "couchdb",
+                "memcached",
+                "php",
+                "redis",
+                "xcache"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/cache/issues",
+                "source": "https://github.com/doctrine/cache/tree/2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-20T20:07:39+00:00"
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "3.6.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "96d5a70fd91efdcec81fc46316efc5bf3da17ddf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/96d5a70fd91efdcec81fc46316efc5bf3da17ddf",
+                "reference": "96d5a70fd91efdcec81fc46316efc5bf3da17ddf",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2",
+                "doctrine/cache": "^1.11|^2.0",
+                "doctrine/deprecations": "^0.5.3|^1",
+                "doctrine/event-manager": "^1|^2",
+                "php": "^7.4 || ^8.0",
+                "psr/cache": "^1|^2|^3",
+                "psr/log": "^1|^2|^3"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "12.0.0",
+                "fig/log-test": "^1",
+                "jetbrains/phpstorm-stubs": "2023.1",
+                "phpstan/phpstan": "1.10.21",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "phpunit/phpunit": "9.6.9",
+                "psalm/plugin-phpunit": "0.18.4",
+                "squizlabs/php_codesniffer": "3.7.2",
+                "symfony/cache": "^5.4|^6.0",
+                "symfony/console": "^4.4|^5.4|^6.0",
+                "vimeo/psalm": "4.30.0"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+            "keywords": [
+                "abstraction",
+                "database",
+                "db2",
+                "dbal",
+                "mariadb",
+                "mssql",
+                "mysql",
+                "oci8",
+                "oracle",
+                "pdo",
+                "pgsql",
+                "postgresql",
+                "queryobject",
+                "sasql",
+                "sql",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/dbal/issues",
+                "source": "https://github.com/doctrine/dbal/tree/3.6.5"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdbal",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-07-17T09:15:50+00:00"
+        },
+        {
+            "name": "doctrine/deprecations",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/deprecations.git",
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9",
+                "phpstan/phpstan": "1.4.10 || 1.10.15",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psalm/plugin-phpunit": "0.18.4",
+                "psr/log": "^1 || ^2 || ^3",
+                "vimeo/psalm": "4.30.0 || 5.12.0"
+            },
+            "suggest": {
+                "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Deprecations\\": "lib/Doctrine/Deprecations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
+            "homepage": "https://www.doctrine-project.org/",
+            "support": {
+                "issues": "https://github.com/doctrine/deprecations/issues",
+                "source": "https://github.com/doctrine/deprecations/tree/v1.1.1"
+            },
+            "time": "2023-06-03T09:27:29+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^10",
+                "phpstan/phpstan": "^1.8.8",
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "event dispatcher",
+                "event manager",
+                "event system",
+                "events"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/event-manager/issues",
+                "source": "https://github.com/doctrine/event-manager/tree/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-12T20:59:15+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -693,33 +1487,29 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.0.0",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "3a494dc7dc1d7d12e511890177ae2d0e6c107da6"
+                "reference": "67ab6e18aaa14d753cc148911d273f6e6cb6721e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/3a494dc7dc1d7d12e511890177ae2d0e6c107da6",
-                "reference": "3a494dc7dc1d7d12e511890177ae2d0e6c107da6",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/67ab6e18aaa14d753cc148911d273f6e6cb6721e",
+                "reference": "67ab6e18aaa14d753cc148911d273f6e6cb6721e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5 || ^8.0"
+                "php": ">=5.5"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+                "symfony/phpunit-bridge": "^4.4 || ^5.1"
             },
             "type": "library",
-            "extra": {
-                "bamarni-bin": {
-                    "bin-links": true,
-                    "forward-command": false
-                }
-            },
             "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
                 "psr-4": {
                     "GuzzleHttp\\Promise\\": "src/"
                 }
@@ -756,7 +1546,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.0"
+                "source": "https://github.com/guzzle/promises/tree/1.5.3"
             },
             "funding": [
                 {
@@ -772,7 +1562,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-21T13:50:22+00:00"
+            "time": "2023-05-21T12:31:43+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1645,6 +2435,72 @@
             "time": "2023-05-04T09:04:26+00:00"
         },
         {
+            "name": "league/flysystem-aws-s3-v3",
+            "version": "3.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
+                "reference": "d8de61ee10b6a607e7996cff388c5a3a663e8c8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/d8de61ee10b6a607e7996cff388c5a3a663e8c8a",
+                "reference": "d8de61ee10b6a607e7996cff388c5a3a663e8c8a",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.220.0",
+                "league/flysystem": "^3.10.0",
+                "league/mime-type-detection": "^1.0.0",
+                "php": "^8.0.2"
+            },
+            "conflict": {
+                "guzzlehttp/guzzle": "<7.0",
+                "guzzlehttp/ringphp": "<1.1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\AwsS3V3\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frankdejonge.nl"
+                }
+            ],
+            "description": "AWS S3 filesystem adapter for Flysystem.",
+            "keywords": [
+                "Flysystem",
+                "aws",
+                "file",
+                "files",
+                "filesystem",
+                "s3",
+                "storage"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem-aws-s3-v3/issues",
+                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/3.15.0"
+            },
+            "funding": [
+                {
+                    "url": "https://ecologi.com/frankdejonge",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-05-02T20:02:14+00:00"
+        },
+        {
             "name": "league/flysystem-local",
             "version": "3.15.0",
             "source": {
@@ -1860,6 +2716,67 @@
                 }
             ],
             "time": "2023-06-21T08:46:11+00:00"
+        },
+        {
+            "name": "mtdowling/jmespath.php",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmespath/jmespath.php.git",
+                "reference": "9b87907a81b87bc76d19a7fb2d61e61486ee9edb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/9b87907a81b87bc76d19a7fb2d61e61486ee9edb",
+                "reference": "9b87907a81b87bc76d19a7fb2d61e61486ee9edb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.17"
+            },
+            "require-dev": {
+                "composer/xdebug-handler": "^1.4 || ^2.0",
+                "phpunit/phpunit": "^4.8.36 || ^7.5.15"
+            },
+            "bin": [
+                "bin/jp.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/JmesPath.php"
+                ],
+                "psr-4": {
+                    "JmesPath\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Declaratively specify how to extract elements from a JSON document",
+            "keywords": [
+                "json",
+                "jsonpath"
+            ],
+            "support": {
+                "issues": "https://github.com/jmespath/jmespath.php/issues",
+                "source": "https://github.com/jmespath/jmespath.php/tree/2.6.1"
+            },
+            "time": "2021-06-14T00:11:39+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2328,6 +3245,124 @@
                 }
             ],
             "time": "2023-02-25T19:38:58+00:00"
+        },
+        {
+            "name": "prologue/alerts",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/prologuephp/alerts.git",
+                "reference": "33e86d1f64dae7a8d6e29e7d6c282abc77a89b97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/prologuephp/alerts/zipball/33e86d1f64dae7a8d6e29e7d6c282abc77a89b97",
+                "reference": "33e86d1f64dae7a8d6e29e7d6c282abc77a89b97",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~9|^10",
+                "illuminate/session": "~9|^10",
+                "illuminate/support": "~9|^10"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Prologue\\Alerts\\AlertsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Alert": "Prologue\\Alerts\\Facades\\Alert"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prologue\\Alerts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dries Vints",
+                    "email": "dries.vints@gmail.com",
+                    "homepage": "http://driesvints.com",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@tabacitu.ro",
+                    "homepage": "http://tabacitu.ro",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Prologue Alerts is a package that handles global site messages.",
+            "keywords": [
+                "alerts",
+                "laravel",
+                "messages"
+            ],
+            "support": {
+                "issues": "https://github.com/prologuephp/alerts/issues",
+                "source": "https://github.com/prologuephp/alerts/tree/1.1.0"
+            },
+            "time": "2023-02-01T06:54:14+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/3.0.0"
+            },
+            "time": "2021-02-03T23:26:27+00:00"
         },
         {
             "name": "psr/container",
@@ -5509,6 +6544,76 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "backpack/generators",
+            "version": "v4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Backpack/Generators.git",
+                "reference": "e5314899f3b449c3f23dff06f2569371b0de35df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Generators/zipball/e5314899f3b449c3f23dff06f2569371b0de35df",
+                "reference": "e5314899f3b449c3f23dff06f2569371b0de35df",
+                "shasum": ""
+            },
+            "require": {
+                "backpack/crud": "^6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0||^7.0",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Backpack\\Generators\\GeneratorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Backpack\\Generators\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "tabacitu@backpackforlaravel.com",
+                    "homepage": "https://backpackforlaravel.com",
+                    "role": "Lead Developer & Maintainer"
+                },
+                {
+                    "name": "Cristian Tone",
+                    "email": "cristitone@outlook.com",
+                    "homepage": "http://updivision.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate files for laravel projects",
+            "homepage": "https://github.com/laravel-backpack/generators",
+            "keywords": [
+                "config",
+                "generators",
+                "model",
+                "request",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Backpack/Generators/issues",
+                "source": "https://github.com/Laravel-Backpack/Generators/tree/v4.0.2"
+            },
+            "time": "2023-07-24T10:35:15+00:00"
+        },
         {
             "name": "fakerphp/faker",
             "version": "v1.23.0",
